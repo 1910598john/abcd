@@ -90,12 +90,12 @@ $(document).ready(function(){
 
 							$("#movie-player-container").click(function(event){
 								event.stopImmediatePropagation();
-								if (data.original_title.includes("Deadpool & Wolverine")) {
-									setTimeout(() => {
-										$(this).html(`
-											<video id="vid" controls style="width:100%;height:100%;object-fit:contain;"></video>`);
-									}, 1000);
-								}
+								
+								setTimeout(() => {
+									$(this).html(`
+										<video id="vid" controls style="width:100%;height:100%;object-fit:contain;"></video>`);
+								}, 1000);
+								
 							})
 
 						}, 1000);
