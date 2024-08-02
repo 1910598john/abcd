@@ -53,7 +53,7 @@ $(document).ready(function(){
 						let genres = response.genres;
 						let genre = "";
 
-						console.log(event.target.result);
+				
 						let data = event.target.result[0];
 						let date = new Date(data.release_date);
 	
@@ -134,7 +134,7 @@ $(document).ready(function(){
 		.then(response => response.json())
 		.then(response => {
 			let data = response.results;
-			console.log(data);
+		
 			
 			let container = document.getElementById("content-movies");
 			for (let i = 0; i < data.length; i++) {
@@ -167,7 +167,7 @@ $(document).ready(function(){
 			$(".movie-item").click(function(event){
 				event.stopImmediatePropagation();
 				let obj = $(this).data("movie");
-				console.log(obj);
+				
 	
 				let transaction = db.transaction(["movie"], "readwrite");
 				let objectStore = transaction.objectStore("movie");
@@ -201,7 +201,7 @@ $(document).ready(function(){
 			.then(response => response.json())
 			.then(response => {
 				let data = response.results;
-				console.log(data);
+			
 	
 				let container = document.getElementById("content-movies");
 				container.innerHTML = "";
@@ -246,7 +246,7 @@ $(document).ready(function(){
 			.then(response => response.json())
 			.then(response => {
 				let data = response.results;
-				console.log(data);
+
 	
 				let container = document.getElementById("content-movies");
 				container.innerHTML = "";
